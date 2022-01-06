@@ -95,8 +95,8 @@ TZDEFAULT = $(TOPDIR)/etc/localtime
 # The subdirectory containing installed program and data files, and
 # likewise for installed files that can be shared among architectures.
 # These should be relative file names.
-USRDIR = usr
-USRSHAREDIR = $(USRDIR)/share
+USRDIR = 
+USRSHAREDIR = $(USRDIR)/etc
 
 # "Compiled" timezone information is placed in the "TZDIR" directory
 # (and subdirectories).
@@ -370,7 +370,7 @@ GCC_DEBUG_FLAGS = -DGCC_LINT -g3 -O3 -fno-common \
 # January's first Monday when a "%V" format is used and January 1
 # falls on a Friday, Saturday, or Sunday.
 
-CFLAGS=
+CFLAGS=-DZIC_BLOAT_DEFAULT=\"fat\"
 
 # Linker flags.  Default to $(LFLAGS) for backwards compatibility
 # to release 2012h and earlier.
